@@ -8,13 +8,241 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background:   #C6AD8F !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+html{
+  background-color:   #C6AD8F;
+}
+
+
+
+@media (max-width:768px) {
+  
+  .byhaNK{
+
+  }
+  .Nav{
+    display: flex;
+  }
+  .logo{
+  }
+  .logo p{
+  position: relative;
+    font-size: 50px;
+    left: -30px;
+    top:0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+}
+
 
 .logo{
   font-size: 5rem;
+  font-family: 'Moon Dance', cursive;
+  margin: 0;
 }
+.logo p{
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.elerhetosegek{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #4A3429;
+  color: #C6AD8F;
+}
+
+.icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 1rem;
+  left: 3rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: black;
+
+}
+
+.about-us{
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  margin-top: 15rem;
+  margin-bottom: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.about-header{
+  display: flex;
+  justify-content: center;
+}
+.szolg-main{
+  margin-top: 15rem;
+  margin-bottom: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.form-main{
+  margin-top: 15rem;
+  margin-bottom: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.kapcs-main{
+    margin-top: 15rem;
+    margin-bottom: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  
+}
+
+.galeria-main{
+  margin-top: 15rem;
+  margin-bottom: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.footer-main{
+  background-color: black;
+  padding: 5rem;
+  color: #C6AD8F;
+  display: flex;
+  justify-content: space-around;
+}
+
+.mainpage{
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+
+}
+
+.rightnav{
+  z-index: 10;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display:none;
+  position: absolute;
+  background-color: #4A3429;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-test{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-right-content a{
+color: #C6AD8F;
+}
+.swiper-container{
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 80px;
+  left: 250px;
+}
+
+.mainpage-box{
+  width: 15rem;
+  height: 15rem;
+  background-color: #4A3429;
+  border-radius: 3rem;
+}
+.mainpage-container{
+display: flex;
+flex-wrap: wrap;
+gap: 2rem;
+justify-content: center;
+}
+
+.mainpage-header{
+  display: flex;
+  justify-content: center;
+  color: #4A3429;
+  margin-bottom: 2rem;
+}
+
+.test span{
+  background-color: black;
+  color: #C6AD8F;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+.test{
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next:after{
+  color: #4A3429;
+}
+.swiper-button-prev:after{
+  color: #4A3429
+}
+
+.contactus-container input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.contactus-container input:focus {
+  background: transparent;
+  border: none;
+  border-width: 0 0 2px;
+  border-color: white;
+}
+.contactus-container input::placeholder {
+  color: white;
+  padding-left: 20px;
+  font-size: 18px;
+}
+.contactus-container textarea{
+
+  background: transparent;
+  border: 0;
+  outline: 0;
+
+  /* border-bottom: 1px solid white; */
+}
+  .contactus-container textarea:focus{
+    background:transparent;
+    border: none;
+      border-width: 0 0 2px;
+      border-color:white
+    }
+
+    .contactus-container textarea::placeholder{
+      color: white;
+    }

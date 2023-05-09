@@ -11,6 +11,7 @@ const StyledBurger = styled.div`
   z-index: 20;
   display: none;
   @media (max-width: 768px) {
+    z-index: 2000;
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
