@@ -7,12 +7,12 @@ const Rolunk = () => {
        return ( 
         
         <div className="about-us">
-            <div className="about-header">
-            <h1>Rólunk</h1>
+            <div className="about-header" style={{backgroundImage:'url(../virag.jpg)',width:'100%',height:'300px',backgroundPosition:'center',backgroundSize:'cover'}}>
+           
             </div>
-           <div className="about-main">
+           <div className="about-main container">
 
-            
+             <h1 className="display-1">Rólunk</h1>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repellat, natus consectetur qui, nisi laborum amet libero, quis vitae officia dolorum autem eos sunt ea ratione? Labore non voluptates maiores.
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, ea quo cumque maiores totam dignissimos nulla nam? Recusandae consequuntur fuga, et distinctio, modi ea adipisci rerum facere deleniti voluptates minus!
             Vero, illum ut adipisci nemo vel cumque. Minus, enim quisquam et perspiciatis aliquam, eos facilis odit sunt natus quidem expedita repudiandae necessitatibus quia illo fuga voluptate quae voluptates laborum? Labore.

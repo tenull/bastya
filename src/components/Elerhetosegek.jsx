@@ -12,7 +12,7 @@ const Elerhetosegek = () => {
                 </div>
                 <div>
                 <h2>Otthonunk</h2>
-                <p>4450,Tiszalök, Vörösmarty u. 4</p>
+                <p>4450,Tiszalök, Hősök tere 7/a</p>
                 </div>
             </div>
             <div className="telefonszam">
@@ -20,8 +20,8 @@ const Elerhetosegek = () => {
             <PhoneIcon fontSize='large'/>
             </div>
                 <h2>Telefonszám</h2>
-                <p>Pallay Zsófia</p>
-                <p>+36-30-5555-444</p>
+                <p>Szolgálati telefonszám</p>
+                <p>+36-30-162-8381</p>
             </div>
             <div className="ugyfelfogadas">
                 <div className="icon">
@@ -29,6 +29,7 @@ const Elerhetosegek = () => {
                 </div>
                 <h2>Ügyfélfogadás</h2>
                 <p>Hétfőtől-Csütörtökig 8-16</p>
+                <p>Péntek 8-13:30</p>
             </div>
         </div>
 

@@ -8,7 +8,9 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background:   #C6AD8F !important;
+  /* background:   #B89B5E !important; */
+  background: #C6AD8F!important;
+  font-family: Roboto, sans-serif;
 }
 
 code {
@@ -18,14 +20,78 @@ code {
 html{
   background-color:   #C6AD8F;
 }
+a{
+  font-family: Roboto;
+}
 
-
-
-@media (max-width:768px) {
-  
-  .byhaNK{
+@media(min-width:769px){
+  .about-us{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    margin-top: 8.5rem;
+    margin-bottom: 5rem;
+  }
+  .szolg-main{
+    margin-top: 8.5rem;
+    margin-bottom: 5rem;
+  }
+  .form-main{
+    margin-top: 8.5rem;
+    margin-bottom: 5rem;
 
   }
+  
+  .kapcs-main{
+      margin-top: 15rem;
+      margin-bottom: 5rem;
+      padding-left: 5rem;
+      padding-right: 5rem;
+    
+  }
+  
+  .galeriatop{
+    margin-top: 8.5rem;
+    margin-bottom: 5rem;
+
+  }
+
+}
+
+@media (max-width:768px) {
+  .about-us{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .szolg-main{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .form-main{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+  }
+  
+  .kapcs-main{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+  }
+  
+  .galeriatop{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+  }
+  
   .Nav{
     display: flex;
   }
@@ -45,13 +111,15 @@ html{
 
 
 .logo{
-  font-size: 5rem;
-  font-family: 'Moon Dance', cursive;
+  font-size: 3rem;
+  /* font-family: 'Moon Dance', cursive; */
+  font-family: Roboto;
+  text-transform: uppercase;
   margin: 0;
 }
 .logo p{
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 
 .elerhetosegek{
@@ -75,47 +143,9 @@ html{
 
 }
 
-.about-us{
-  display: flex;
-  justify-content:center;
-  flex-direction: column;
-  margin-top: 15rem;
-  margin-bottom: 5rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
 
-.about-header{
-  display: flex;
-  justify-content: center;
-}
-.szolg-main{
-  margin-top: 15rem;
-  margin-bottom: 5rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-.form-main{
-  margin-top: 15rem;
-  margin-bottom: 5rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
 
-.kapcs-main{
-    margin-top: 15rem;
-    margin-bottom: 5rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-  
-}
 
-.galeria-main{
-  margin-top: 15rem;
-  margin-bottom: 5rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
 
 .footer-main{
   background-color: black;
@@ -125,15 +155,13 @@ html{
   justify-content: space-around;
 }
 
+
 .mainpage{
   margin-top: 8rem;
   margin-bottom: 5rem;
 
 }
 
-.rightnav{
-  z-index: 10;
-}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -166,7 +194,7 @@ color: #C6AD8F;
   align-items: center;
   position: relative;
   top: 80px;
-  left: 250px;
+  
 }
 
 .mainpage-box{
@@ -204,15 +232,34 @@ justify-content: center;
   align-items: center;
 }
 
-.swiper-button-next:after{
+/* .swiper-button-next:after{
   color: #4A3429;
 }
 .swiper-button-prev:after{
   color: #4A3429
+} */
+.kapcs-main{
+  background-color: #4A3429;
+  border-radius: 10px;
+  color: #B89B5E;
+}
+.button-kapcs{
+  background-color: #B89B5E;
+  color: #4A3429;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 20px;
+}
+.button-kapcs:hover{
+  background-color: black;
+  color: #B89B5E;
 }
 
 .contactus-container input {
   background: transparent;
+  border-color: #C6AD8F!important;
   border: 0;
   outline: 0;
 }
@@ -221,16 +268,17 @@ justify-content: center;
   background: transparent;
   border: none;
   border-width: 0 0 2px;
-  border-color: white;
+  border-color: #C6AD8F!important;
 }
 .contactus-container input::placeholder {
-  color: white;
+  color: #B89B5E;
   padding-left: 20px;
   font-size: 18px;
 }
 .contactus-container textarea{
 
   background: transparent;
+  border-color: #C6AD8F!important;
   border: 0;
   outline: 0;
 
@@ -240,9 +288,72 @@ justify-content: center;
     background:transparent;
     border: none;
       border-width: 0 0 2px;
-      border-color:white
+      border-color: #C6AD8F
     }
 
     .contactus-container textarea::placeholder{
-      color: white;
+      color:#B89B5E;
+      padding-left: 20px;
+      font-size: 18px;
     }
+.rightnav{
+  z-index: 10;
+  position: sticky;
+  top: 0;
+}
+
+
+.rightnav-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80px; 
+  margin-bottom: 20px; 
+}
+
+.swiper-button-next::after{
+  background-color: #4A3429;
+  color:#B89B5E;
+  padding: 1rem;
+  border-radius: 5px;
+  position: relative;
+  right: 25px;
+}
+.swiper-button-prev::after{
+  background-color: #4A3429;
+  color:#B89B5E;
+  padding: 1rem;
+  border-radius: 5px;
+  position: relative;
+  left: 25px;
+}
+.swiper-button-next:hover{
+  transition: color 0.3s ease-in-out;
+  color: #B89B5E;
+}
+
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  opacity: 0; 
+  transition: opacity 0.7s ease-in-out;
+}
+
+.mySwiper:hover .swiper-button-next,
+.mySwiper:hover .swiper-button-prev {
+  opacity: 1;
+}
+.textshadow{
+  text-shadow: 3px 3px 3px black;
+}
+.idezet{
+  font-family: 'Moon Dance', cursive;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+}
+.idezet2{
+  font-family: 'Moon Dance', cursive;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}
