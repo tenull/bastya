@@ -11,8 +11,9 @@ import "swiper/css/navigation";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import 'swiper/css';
 import Container from 'react-bootstrap/Container';
-import { imageData } from '../imageData';
-console.log(imageData)
+import { Link } from 'react-router-dom';
+import { foglalkozasData } from '../foglalkozasData';
+console.log(foglalkozasData)
 const Mainpage = () => {
     return (
         <div className="mainpage">
@@ -81,10 +82,10 @@ showUnder={160}>
 </ScrollToTop>
 
             <div className="container mainpage-header mt-5">
-                <p className='display-3 text-center'>Üdvözöljük a Tiszalöki Bástya Idősotthon oldalán</p>
+                <p className='display-5 m-0 text-center'>Foglalkozások</p>
             </div>
-            {/* <div className="mainpage-container d-flex flex-wrap">
-{imageData.map((data,index)=>(
+            <div className="mainpage-container d-flex flex-wrap">
+{foglalkozasData.map((data,index)=>(
  <div key={index} className="mainpage-container">
  <div className="card1 d-flex">
  <Card sx={{ maxWidth: 345 , backgroundColor:'#4A3429'}}>
@@ -104,17 +105,17 @@ showUnder={160}>
              </Typography>
          </CardContent>
      </CardActionArea>
-     <CardActions>
+     {/* <CardActions>
          <Button sx={{color:'#C6AD8F'}} size="small" color="primary">
-            Tovább
+         <Link to="/galeria" style={{ textDecoration:'none', color:'#C6AD8F' }}>Tovább</Link>
          </Button>
-     </CardActions>
+     </CardActions> */}
  </Card>
  </div>
 
 </div>
 ))}
-           </div> */}
+           </div>
 
  <Container className='mt-5 mb-5'>
             <div className="mainpage-content">
