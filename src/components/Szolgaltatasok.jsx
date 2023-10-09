@@ -1,11 +1,32 @@
 import { Container } from "react-bootstrap";
+import { Breadcrumb } from "react-bootstrap";
 const Szolgaltatasok = () => {
     return ( 
 
         <div className="szolg-main">
             <div className="szolg-header" style={{backgroundImage:'url(../virag.jpg)',width:'100%',height:'300px',backgroundPosition:'center',backgroundSize:'cover'}}>
-                <Container> <h1 className="display-2 textshadow pt-5 text-white">Szolgáltatások</h1> </Container>
+                <Container> 
+                <div  className="d-flex justify-content-center">
+                    <h1 className="display-4 textshadow pt-5 text-white">Szolgáltatások
+                    </h1> 
+</div>
+                
+                 </Container>
               
+            </div>
+            <div className="form-content">
+                <Breadcrumb className="container">
+                    <div className="bread">
+                    <div className="one">
+                        <p className="fs-5 fw-bold m-0 pt-2">Szolgáltatások</p>
+                    </div>
+                    <div className="sec d-flex alig-items-center header-text">
+                        <Breadcrumb.Item className="d-flex align-items-center" href="#">Főoldal</Breadcrumb.Item>
+                        <Breadcrumb.Item className="d-flex align-items-center" active>Szolgáltatások</Breadcrumb.Item>
+                    </div>
+                    </div>
+                </Breadcrumb>
+
             </div>
             <div className="szolg-content container">
                 

@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { Container } from "react-bootstrap";
+import { Breadcrumb } from "react-bootstrap";
 
 const Galeria = () => {
     const [image, setImage] = useState([])
@@ -25,48 +26,76 @@ const Galeria = () => {
 
     return (
         <div className="galeriatop">
-             <div className="galeria-header" style={{backgroundImage:'url(../virag2.jpg)',width:'100%',height:'300px',backgroundPosition:'center'}}>
-                <Container><h1 className="display-2 pt-5  textshadow " style={{}}>Galéria</h1></Container>
-             
-                </div>
-            <div className="container galeria-main">
-                <div className="galeria-content">
-                 <Container className="rounded  mt-5 pt-5  pb-5 text-center" style={{backgroundColor:'#4A3429'}}><h1 className="display-5">Programok</h1>
-                  <Container className="d-flex justify-content-center flex-wrap">
-                        {imageData.map((item) => (
-                            <div className="col-lg-4 mt-3 d-flex flex-column align-items-center" key={item.title}>
-                                <p className="fs-5 text-center m-0">{item.date}</p>
-                                <p className="fs-5 text-center m-0">{item.title}</p>
-                                <img
-                                    src={`${item.mainimage}?w=164&h=164&fit=crop&auto=format`}
-                                    onClick={() => handleShow(item)}
-                                    alt={item.title}
-                                    loading="lazy"
-                                    style={{minWidth:'200px', minHeight:'200px',maxWidth:'300px',maxHeight:'200px',cursor:'pointer'}}
-                                    className="img-fluid rounded kep"
-                                />
-                            </div>
-                        ))}
-                   </Container>
-                </Container>
-                <Container className="rounded  mt-5 pt-5  pb-5 text-center" style={{backgroundColor:'#4A3429'}}><h1 className="display-5">Foglalkozások</h1>
-                  <Container className="d-flex justify-content-center flex-wrap">
-                        {foglalkozasData.map((item) => (
-                            <div className="col-lg-4 mt-3 d-flex flex-column align-items-center" key={item.title}>
-                                {/* <p className="fs-5 text-center m-0">{item.date}</p> */}
-                                <p className="fs-5 text-center m-0">{item.title}</p>
-                                <img
-                                    src={`${item.mainimage}?w=164&h=164&fit=crop&auto=format`}
-                                    onClick={() => handleShow(item)}
-                                    alt={item.title}
-                                    loading="lazy"
-                                    style={{minWidth:'200px', minHeight:'200px',maxWidth:'300px',maxHeight:'200px', cursor: 'pointer'}}
-                                    className="img-fluid rounded"
-                                />
-                            </div>
-                        ))}
-                   </Container>
-                </Container>
+            <div className="galeria-header" style={{ backgroundImage: 'url(../virag2.jpg)', width: '100%', height: '300px', backgroundPosition: 'center' }}>
+                <Container>
+                    <div className="d-flex justify-content-center">
+                    <h1 className="display-4 pt-5  textshadow text-white " style={{}}>Galéria
+                    
+                    </h1>
+                    </div>
+                    </Container>
+
+            </div>
+            <div className="galeria-main">
+            <div className="form-content">
+                <Breadcrumb className="container">
+                    <div className="bread">
+                    <div className="one">
+                        <p className="fs-5 fw-bold m-0 pt-2 text-black">Galéria</p>
+                    </div>
+                    <div className="sec d-flex alig-items-center header-text">
+                        <Breadcrumb.Item className="d-flex align-items-center" href="#">Főoldal</Breadcrumb.Item>
+                        <Breadcrumb.Item className="d-flex align-items-center" active>Galéria</Breadcrumb.Item>
+                    </div>
+                    </div>
+                </Breadcrumb>
+
+            </div>
+                <div className="galeria-content container">
+                    <Container className="rounded  mt-5 pt-2 pb-5 text-center" style={{ backgroundColor: '#4A3429' }}>
+                    <div className="container mainpage-header mt-5">
+            <p className='display-5  foglal m-0 text-center ' style={{color:'#C6AD8F'}}>Programok</p>
+          </div>
+                        <Container className="d-flex justify-content-center flex-wrap">
+                            {imageData.map((item) => (
+                                <div className="col-lg-4 mt-3 d-flex flex-column align-items-center " key={item.title}>
+                                    <p className="fs-5 text-center m-0">{item.date}</p>
+                                    <p className="fs-5 text-center m-0">{item.title}</p>
+
+                                    <img
+                                        src={`${item.mainimage}?w=164&h=164&fit=crop&auto=format`}
+                                        onClick={() => handleShow(item)}
+                                        alt={item.title}
+                                        loading="lazy"
+                                        style={{ minWidth: '200px', minHeight: '200px', maxWidth: '300px', maxHeight: '200px', cursor: 'pointer' }}
+                                        className="img-fluid rounded keep2"
+                                    />
+
+                                </div>
+                            ))}
+                        </Container>
+                    </Container>
+                    <Container className="rounded  mt-5 pt-3  pb-5 text-center" style={{ backgroundColor: '#4A3429' }}>
+                    <div className="container mainpage-header mt-5">
+            <p className='display-5  foglal m-0 text-center ' style={{color:'#C6AD8F'}}>Foglalkozások</p>
+          </div>
+                        <Container className="d-flex justify-content-center flex-wrap">
+                            {foglalkozasData.map((item) => (
+                                <div className="col-lg-4 mt-3 d-flex flex-column align-items-center" key={item.title}>
+                                    {/* <p className="fs-5 text-center m-0">{item.date}</p> */}
+                                    <p className="fs-5 text-center m-0">{item.title}</p>
+                                    <img
+                                        src={`${item.mainimage}?w=164&h=164&fit=crop&auto=format`}
+                                        onClick={() => handleShow(item)}
+                                        alt={item.title}
+                                        loading="lazy"
+                                        style={{ minWidth: '200px', minHeight: '200px', maxWidth: '300px', maxHeight: '200px', cursor: 'pointer' }}
+                                        className="img-fluid rounded keep2"
+                                    />
+                                </div>
+                            ))}
+                        </Container>
+                    </Container>
                     <Modal show={show} onHide={handleClose} backdrop="static"
                         keyboard={false}
                         size="lg">
@@ -76,7 +105,7 @@ const Galeria = () => {
                         <Modal.Body className="d-flex flex-wrap justify-content-center">
 
                             {actualData.images && Object.keys(actualData.images).map((key) => (
-                                <img className="img-fluid m-1" style={{ maxWidth: '250px', maxHeight: '250px', cursor: 'pointer'  }} key={key} src={actualData.images[key]}  onClick={() => window.open(actualData.images[key], '_blank')} />
+                                <img className="img-fluid m-1" style={{ maxWidth: '250px', maxHeight: '250px', cursor: 'pointer' }} key={key} src={actualData.images[key]} onClick={() => window.open(actualData.images[key], '_blank')} />
                             ))}
                         </Modal.Body>
 
@@ -84,7 +113,7 @@ const Galeria = () => {
 
                 </div>
             </div>
-            </div>
+        </div>
     );
 }
 
