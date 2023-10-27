@@ -12,19 +12,20 @@ const Ul = styled.ul`
   list-style: none!important;
   display: flex;
   flex-flow: row nowrap;
-  background-color: #4A3429;
+  background-color: #285531;
   margin:0;
   padding: 2rem 4rem;
   gap: 4rem;
   
   a {
-    color: #C6AD8F;
+    color: white;
     list-style: none!important;
     text-decoration:none;
     transition: color 0.3s ease-in-out;
+    font-weight:bold
   }
   a:hover{
-    color:#B89B5E;
+    color:#808080;
     // text-decoration:underline;
     
     
@@ -33,7 +34,7 @@ const Ul = styled.ul`
   @media (max-width: 768px) {
     z-index:10;
     flex-flow: column nowrap;
-    background-color: #4A3429;
+    background-color: #285531;
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
     top: 0;

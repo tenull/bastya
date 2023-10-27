@@ -51,10 +51,10 @@ const Galeria = () => {
                 </Breadcrumb>
 
             </div>
-                <div className="galeria-content container">
-                    <Container className="rounded  mt-5 pt-2 pb-5 text-center" style={{ backgroundColor: '#4A3429' }}>
+                <div className="galeria-content">
+                    <Container className="rounded  mt-2 pt-2 pb-3 text-center" style={{ backgroundColor: '' }}>
                     <div className="container mainpage-header mt-5">
-            <p className='display-5  foglal m-0 text-center ' style={{color:'#C6AD8F'}}>Programok</p>
+            <p className='display-5  foglal m-0 text-center ' style={{color:''}}>Programok</p>
           </div>
                         <Container className="d-flex justify-content-center flex-wrap">
                             {imageData.map((item) => (
@@ -75,9 +75,10 @@ const Galeria = () => {
                             ))}
                         </Container>
                     </Container>
-                    <Container className="rounded  mt-5 pt-3  pb-5 text-center" style={{ backgroundColor: '#4A3429' }}>
+                    <div className="fogl-bottom" style={{backgroundColor:'#EEEEEE'}}>
+                    <Container className="rounded  mt-5 pt-3  pb-5 text-center" style={{ backgroundColor: '' }}>
                     <div className="container mainpage-header mt-5">
-            <p className='display-5  foglal m-0 text-center ' style={{color:'#C6AD8F'}}>Foglalkozások</p>
+            <p className='display-5  foglal m-0 text-center ' style={{color:''}}>Foglalkozások</p>
           </div>
                         <Container className="d-flex justify-content-center flex-wrap">
                             {foglalkozasData.map((item) => (
@@ -90,12 +91,13 @@ const Galeria = () => {
                                         alt={item.title}
                                         loading="lazy"
                                         style={{ minWidth: '200px', minHeight: '200px', maxWidth: '300px', maxHeight: '200px', cursor: 'pointer' }}
-                                        className="img-fluid rounded keep2"
+                                        className="img-fluid rounded keep2 mb-4"
                                     />
                                 </div>
                             ))}
                         </Container>
                     </Container>
+                    </div>
                     <Modal show={show} onHide={handleClose} backdrop="static"
                         keyboard={false}
                         size="lg">

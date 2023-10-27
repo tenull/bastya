@@ -4,7 +4,9 @@ import { GoogleMap, useLoadScript, Marker, useJsApiLoader } from '@react-google-
 import emailjs from 'emailjs-com';
 import { useScrollTrigger } from "@mui/material";
 import { Breadcrumb } from "react-bootstrap";
-
+import Phone from "@mui/icons-material/Phone";
+import { Email, Mail } from "@mui/icons-material";
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const Kapcsolat = () => {
 
@@ -98,25 +100,23 @@ const Kapcsolat = () => {
                 <div className="kapcs-header-bottom">
                     <p>Otthonaink szolgáltatásai, illetve elhelyezési lehetőségek kapcsán felmerülő kérdéseire szívesen válaszolunk!
                         +36 30 3333 444</p>
-                    <p className="fs-5 mb-0 mt-5">Bástya Idősotthon</p>
-                    <p className="fs-6 mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                    </svg>Tiszalök,4450 Hősök tere 8.</p>
-                    <p className="fs-6 mb-0">Telefon: +36 30 3333 444</p>
-                    <p className="fs-6">E-mail: asdas@asdasd.com</p>
+                    <p className="fs-3 mb-3 mt-5">Bástya Idősotthon</p>
+                    <p className="fs-6 mb-1"> <LocationOnIcon></LocationOnIcon> Tiszalök,4450 Hősök tere 8.</p>
+                    <p className="fs-6 mb-1"> <Phone></Phone> Telefon: +36 30 3333 444</p>
+                    <p className="fs-6"><Mail></Mail> E-mail: asdas@asdasd.com</p>
 
                 </div>
-                <div className="kapcs-content">
+                <div className="kapcs-conten mb-5 mt-5 d-flex flex-wrap justify-content-evenly">
                     <div className="elso">
-                        <p className="m-0">Intézmény vezető</p>
+                        <p className="fs-4 m-0">Intézmény vezető</p>
                         <p>Kiss-Csáki Beatrix</p>
                     </div>
                     <div className="masodik">
-                        <p className="m-0">Intézmény vezetőhelyettes</p>
+                        <p className="fs-4 m-0">Intézmény vezetőhelyettes</p>
                         <p>Pallay Zsófia</p>
                     </div>
                     <div className="harmadik">
-                        <p className="m-0">Intézmény ápoló</p>
+                        <p className="fs-4 m-0">Intézmény ápoló</p>
                         <p>G</p>
                     </div>
                 </div>
@@ -127,6 +127,7 @@ const Kapcsolat = () => {
                         zoom={18}
                         onLoad={onLoad}
                         onUnmount={onUnmount}
+                
                     >
 
                         <></>
@@ -134,6 +135,7 @@ const Kapcsolat = () => {
                 ) : null}
                 <div className="contactus-container col-lg-12 p-5 ">
                     <Container>
+                        <p className="text-center fs-4 mb-4">Amennyiben bármilyen kérdése van, vegye fel velünk a kapcsolatot!</p>
                         <Row className="d-flex justify-content-center">
 
 
@@ -157,6 +159,7 @@ const Kapcsolat = () => {
                         </Row>
                     </Container>
                     <Container>
+                        
                         <Row className="d-flex justify-content-center">
 
 

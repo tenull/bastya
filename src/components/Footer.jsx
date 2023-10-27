@@ -1,8 +1,24 @@
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+
+    const apiUrl = 'https://reftiszanagyfalu.hu/wp-json/';
+
+    fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      // Az adatok feldolgozása
+      console.log('API válasz:', data);
+  
+      // Itt tudod kezelni az adatokat és megjeleníteni az oldalon
+      // Például:
+      // document.getElementById('myElement').innerText = data.someValue;
+    })
+    .catch(error => console.error('Hiba történt:', error));
+
     return (
         <div className="footer">
             <div className="footercontent">
@@ -15,8 +31,8 @@ const Footer = () => {
                 <Link to="/kapcsolat" style={{ }}>Kapcsolat</Link>
                 </div>
                 <div className="footer-center d-flex justify-content-center col-lg-4">
-                    <a href="https://www.facebook.com/profile.php?id=100075319150836"><FacebookIcon style={{ textDecoration: 'none', color: '#C6AD8F' }} className='fs-1' /></a>
-                    <InstagramIcon className='fs-1 ms-4' />
+                    <a href="https://www.facebook.com/bastyaidosotthon" target='blank'><FacebookIcon style={{ textDecoration: 'none', color: 'white' }} className='fs-1' /></a>
+                   <a href="https://www.youtube.com/watch?v=2ixYV8p_GT4&ab_channel=Tiszavasv%C3%A1riTV" target='blank'><YouTubeIcon style={{ textDecoration: 'none', color: 'white' }} className='fs-1 ms-4' /></a> 
                 </div>
                 <div className="footer-right position-relative col-lg-4">
                     <div className="">
@@ -33,7 +49,7 @@ const Footer = () => {
 </div>
             </div>
             <div className='bottom-footer'>
-                <div className='container pt-4 pb-3'>
+                <div className='container pt-4 pb-1'>
                     <p className='fs-6'>Tiszalöki Bástya idősotthon © 2023 Minden jog fenntartva</p>
                 </div>
             </div>
