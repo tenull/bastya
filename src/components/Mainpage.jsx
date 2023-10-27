@@ -80,11 +80,11 @@ const Mainpage = () => {
           bottom: 50,
           right: 30,
           cursor: 'pointer',
-          transitionDuration: '0.3s',
+          transitionDuration: '0.1s',
           transitionTimingFunction: 'linear',
           transitionDelay: '0s'
         }}
-        showUnder={160}>
+        showUnder={150}>
         <div className='test'>
           <span className='test'><ArrowUpwardIcon /></span></div>
       </ScrollToTop>
