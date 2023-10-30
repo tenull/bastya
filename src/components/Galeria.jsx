@@ -26,7 +26,7 @@ const Galeria = () => {
 
     return (
         <div className="galeriatop">
-            <div className="galeria-header" style={{ backgroundImage: 'url(../virag2.jpg)', width: '100%', height: '300px', backgroundPosition: 'center' }}>
+            <div className="galeria-header" style={{ backgroundImage: 'url(../virag2.jpg)', width: '100%', height: '300px', backgroundPosition: '50% 60%' }}>
                 <Container>
                     <div className="d-flex justify-content-center">
                     <h1 className="display-4 pt-5  textshadow text-white " style={{}}>Galéria
@@ -39,12 +39,12 @@ const Galeria = () => {
             <div className="galeria-main">
             <div className="form-content">
                 <Breadcrumb className="container">
-                    <div className="bread">
+                    <div className="bread d-flex flex-wrap">
                     <div className="one">
                         <p className="fs-5 fw-bold m-0 pt-2 text-black">Galéria</p>
                     </div>
                     <div className="sec d-flex alig-items-center header-text">
-                        <Breadcrumb.Item className="d-flex align-items-center" href="#">Főoldal</Breadcrumb.Item>
+                        <Breadcrumb.Item className="d-flex align-items-center" href="/">Főoldal</Breadcrumb.Item>
                         <Breadcrumb.Item className="d-flex align-items-center" active>Galéria</Breadcrumb.Item>
                     </div>
                     </div>

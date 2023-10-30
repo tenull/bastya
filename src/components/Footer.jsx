@@ -2,28 +2,51 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import { Link } from 'react-router-dom';
-
+import React, { useRef, useState } from 'react';
+import { GoogleMap, useLoadScript, Marker, useJsApiLoader } from '@react-google-maps/api';
 const Footer = () => {
 
-    const apiUrl = 'https://reftiszanagyfalu.hu/wp-json/';
+    const mapContainerStyle  = {
+        width: '450px',
+        height: '350px'
+    };
+    const mapContainerStyleMobile = {
+        width: '200px',
+        height: '200px',
+      };
 
-    fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-      // Az adatok feldolgozása
-      console.log('API válasz:', data);
-  
-      // Itt tudod kezelni az adatokat és megjeleníteni az oldalon
-      // Például:
-      // document.getElementById('myElement').innerText = data.someValue;
+
+    const center = {
+        lat: 48.02184,
+        lng: 21.38115
+    };
+
+    const [map, setMap] = React.useState(null)
+    const { isLoaded } = useJsApiLoader({
+        id: 'google-map-script',
+        googleMapsApiKey: "AIzaSyB8ZVOSmtLY1o_dL6GAwku8uIT1JrzshuA"
     })
-    .catch(error => console.error('Hiba történt:', error));
+
+
+    const onLoad = React.useCallback(function callback(map) {
+        // This is just an example of getting and using the map instance!!! don't just blindly copy!
+        const bounds = new window.google.maps.LatLngBounds(center);
+        map.fitBounds(bounds);
+
+        setMap(map)
+    }, [])
+
+    const onUnmount = React.useCallback(function callback(map) {
+        setMap(null)
+    }, [])
+
+
 
     return (
         <div className="footer">
             <div className="footercontent">
             <div className="footer-main container d-flex flex-wrap">
-                <div className="footer-left d-flex flex-column col-lg-4">
+                <div className="footer-left d-flex flex-column col-lg-3">
                 <Link to="/rolunk" style={{ }}>Rólunk</Link>
                 <Link to="/szolgaltatasok" style={{ }}> Szolgáltatások</Link>
                 <Link to="/galeria" style={{ }}>Galéria</Link>
@@ -35,8 +58,21 @@ const Footer = () => {
                    <a href="https://www.youtube.com/watch?v=2ixYV8p_GT4&ab_channel=Tiszavasv%C3%A1riTV" target='blank'><YouTubeIcon style={{ textDecoration: 'none', color: 'white' }} className='fs-1 ms-4' /></a> 
                 </div>
                 <div className="footer-right position-relative col-lg-4">
-                    <div className="">
-                        <p className='fs-6 fw-bold text-center'>" Az igazak segítséget kapnak az Úrtól, <br /> erőt a szükség idején." <br />  (Zsoltárok 37:39)</p>
+                    <div className="footer-map">
+                    {isLoaded ? (
+                    <GoogleMap
+                    mapContainerStyle={window.innerWidth <= 768 ? mapContainerStyleMobile : mapContainerStyle}
+                        center={center}
+                        zoom={18}
+                        onLoad={onLoad}
+                        onUnmount={onUnmount}
+                       
+                    >
+
+                        <></>
+                    </GoogleMap>
+                ) : null}
+                <p>4450,Tiszalök, Hősök tere 7/a</p>
                     </div>
                     {/* <div className="footer-right-header">
                 <p>Elérhetőségek</p>

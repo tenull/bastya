@@ -10,10 +10,15 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const Kapcsolat = () => {
 
-    const containerStyle = {
-        width: '100%',
+   const mapContainerStyle  = {
+        width: '90%',
         height: '700px'
     };
+    const mapContainerStyleMobile = {
+        width: '200px',
+        height: '200px',
+      };
+
 
     const center = {
         lat: 48.02184,
@@ -80,12 +85,12 @@ const Kapcsolat = () => {
             </div>
             <div className="form-content">
                 <Breadcrumb className="container">
-                    <div className="bread">
+                    <div className="bread d-flex flex-wrap">
                     <div className="one">
                         <p className="fs-5 fw-bold m-0 pt-2">Kapcsolat</p>
                     </div>
                     <div className="sec d-flex alig-items-center header-text">
-                        <Breadcrumb.Item className="d-flex align-items-center" href="#">Főoldal</Breadcrumb.Item>
+                        <Breadcrumb.Item className="d-flex align-items-center" href="/">Főoldal</Breadcrumb.Item>
                         <Breadcrumb.Item className="d-flex align-items-center" active>Kapcsolat</Breadcrumb.Item>
                     </div>
                     </div>
@@ -99,39 +104,41 @@ const Kapcsolat = () => {
                 </div>
                 <div className="kapcs-header-bottom">
                     <p>Otthonaink szolgáltatásai, illetve elhelyezési lehetőségek kapcsán felmerülő kérdéseire szívesen válaszolunk!
-                        +36 30 3333 444</p>
+                    +36 30 162 8381</p>
                     <p className="fs-3 mb-3 mt-5">Bástya Idősotthon</p>
-                    <p className="fs-6 mb-1"> <LocationOnIcon></LocationOnIcon> Tiszalök,4450 Hősök tere 8.</p>
-                    <p className="fs-6 mb-1"> <Phone></Phone> Telefon: +36 30 3333 444</p>
-                    <p className="fs-6"><Mail></Mail> E-mail: asdas@asdasd.com</p>
+                    <p className="fs-6 mb-1"> <LocationOnIcon></LocationOnIcon> Tiszalök,4450 Hősök tere 7/a.</p>
+                    <p className="fs-6 mb-1"> <Phone></Phone> Telefon: +36 30 162 8381</p>
+                    <p className="fs-6"><Mail></Mail> E-mail: bastyaidosotthon@gmail.com</p>
 
                 </div>
                 <div className="kapcs-conten mb-5 mt-5 d-flex flex-wrap justify-content-evenly">
                     <div className="elso">
-                        <p className="fs-4 m-0">Intézmény vezető</p>
+                        <p className="fs-4 m-0">Intézményvezető</p>
                         <p>Kiss-Csáki Beatrix</p>
                     </div>
                     <div className="masodik">
-                        <p className="fs-4 m-0">Intézmény vezetőhelyettes</p>
+                        <p className="fs-4 m-0">Intézményvezető-helyettes</p>
                         <p>Pallay Zsófia</p>
                     </div>
                     <div className="harmadik">
                         <p className="fs-4 m-0">Intézmény ápoló</p>
-                        <p>G</p>
+                        <p>Koleszár Ferenc</p>
                     </div>
                 </div>
                 {isLoaded ? (
+                    <div className="d-flex justify-content-center">
                     <GoogleMap
-                        mapContainerStyle={containerStyle}
+                         mapContainerStyle={window.innerWidth <= 768 ? mapContainerStyleMobile : mapContainerStyle}
                         center={center}
-                        zoom={18}
+                        zoom={17}
                         onLoad={onLoad}
                         onUnmount={onUnmount}
+                        
                 
                     >
 
                         <></>
-                    </GoogleMap>
+                    </GoogleMap></div>
                 ) : null}
                 <div className="contactus-container col-lg-12 p-5 ">
                     <Container>

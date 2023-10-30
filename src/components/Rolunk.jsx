@@ -7,7 +7,7 @@ const Rolunk = () => {
    return (
 
       <div className="about-us">
-         <div className="about-header" style={{ backgroundImage: 'url(../virag.jpg)', width: '100%', height: '300px', backgroundPosition: 'center', backgroundSize: 'cover' }}>
+         <div className="about-header" style={{ backgroundImage: 'url(../falevel.jpg)', width: '100%', height: '300px', backgroundPosition: '35% 50%', backgroundSize: 'cover' }}>
             <Container>
             <div  className="d-flex justify-content-center">
                     <h1 className="display-4 textshadow pt-5 text-white">Rólunk
@@ -18,12 +18,12 @@ const Rolunk = () => {
          <div className="about-main ">
             <div className="form-content">
                <Breadcrumb className="container">
-                  <div className="bread">
+                  <div className="bread d-flex flex-wrap">
                      <div className="one">
                         <p className="fs-5 fw-bold m-0 pt-2">Rólunk</p>
                      </div>
                      <div className="sec d-flex alig-items-center header-text">
-                        <Breadcrumb.Item className="d-flex align-items-center" href="#">Főoldal</Breadcrumb.Item>
+                        <Breadcrumb.Item className="d-flex align-items-center" href="/">Főoldal</Breadcrumb.Item>
                         <Breadcrumb.Item className="d-flex align-items-center" active>Rólunk</Breadcrumb.Item>
                      </div>
                   </div>

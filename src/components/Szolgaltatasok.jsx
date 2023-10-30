@@ -16,12 +16,12 @@ const Szolgaltatasok = () => {
             </div>
             <div className="form-content">
                 <Breadcrumb className="container">
-                    <div className="bread">
+                    <div className="bread d-flex flex-wrap">
                     <div className="one">
                         <p className="fs-5 fw-bold m-0 pt-2">Szolgáltatások</p>
                     </div>
                     <div className="sec d-flex alig-items-center header-text">
-                        <Breadcrumb.Item className="d-flex align-items-center" href="#">Főoldal</Breadcrumb.Item>
+                        <Breadcrumb.Item className="d-flex align-items-center" href="/">Főoldal</Breadcrumb.Item>
                         <Breadcrumb.Item className="d-flex align-items-center" active>Szolgáltatások</Breadcrumb.Item>
                     </div>
                     </div>

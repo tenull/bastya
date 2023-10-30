@@ -11,16 +11,15 @@ body {
   /* background:   #B89B5E !important; */
   background: #EEEEEE!important;
   font-family: Lora, sans-serif!important;
+  overflow-x: hidden;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-html{
-  background-color:   #C6AD8F;
 
-}
 a{
   font-family: Lora;
 }
@@ -87,6 +86,9 @@ font-size: 20px;
 }
 
 @media (max-width:768px) {
+  .mainpage{
+    margin-top: 0.8rem!important;
+  }
   .logo-content{
     position: fixed;
     top: 0px!important;
@@ -117,28 +119,26 @@ font-size: 20px;
     display: flex;
     justify-content:center;
     flex-direction: column;
-    margin-top: 3rem;
+    margin-top: 0.8rem;
     margin-bottom: 3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
   .szolg-main{
-    margin-top: 3rem;
+    margin-top: 0.8rem;
     margin-bottom: 3rem;
   }
   .form-main{
-    margin-top: 3rem;
+    margin-top: 0.8rem;
     margin-bottom: 3rem;
 
   }
   
   .kapcs-container{
-    margin-top: 3rem;
+    margin-top: 0.8rem;
     margin-bottom: 3rem;
   }
   
   .galeriatop{
-    margin-top: 3rem;
+    margin-top: 0.8rem;
     margin-bottom: 3rem;
 
   }
@@ -158,6 +158,14 @@ font-size: 20px;
     justify-content: center;
     
   }
+  .swiper-image{
+    max-width: 700px;
+    max-height: 400px;
+  }
+  /* .gm-style{
+  max-width: 150px;
+  max-height: 150px!important;
+  } */
 }
 
 
@@ -174,7 +182,7 @@ font-size: 20px;
 }
 
 .elerhetosegek{
-  background-color: #285531;
+  background-color: #b89b5e;
   color: white;
 }
 .otthonunk,.telefonszam,.ugyfelfogadas{
@@ -191,7 +199,7 @@ font-size: 20px;
   bottom: 1rem;
   width: 3rem;
   height: 3rem;
-  background-color: #E38A40;
+  background-color: #285531;
 
 }
 
@@ -209,8 +217,6 @@ font-size: 20px;
 
 .mainpage{
   margin-top: 8rem;
- 
-
 }
 
 .dropdown {
@@ -221,11 +227,15 @@ font-size: 20px;
 .dropdown-content {
   display:none;
   position: absolute;
-  background-color: #285531;
+  top: 56px;
+  background-color: #b89b5e;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
   z-index: 1;
+}
+img{
+  z-index: 1!important;
 }
 
 .dropdown:hover .dropdown-content {
@@ -240,6 +250,7 @@ font-size: 20px;
 .footer-right-content a{
 color: white;
 }
+
 .swiper-container{
   display: flex;
   align-items: center;
@@ -298,7 +309,7 @@ justify-content: center;
   color: white;
 }
 .button-kapcs{
-  background-color: #E38A40;
+  background-color: #b89b5e;
   color: white;
   font-weight: 700;
   border: none;
@@ -307,7 +318,7 @@ justify-content: center;
   font-size: 20px;
 }
 .button-kapcs:hover{
-  background-color: #E38A40;
+  background-color: #b89b5e;
   color: #285531;
 }
 
@@ -366,7 +377,7 @@ justify-content: center;
 }
 
 .swiper-button-next::after{
-  background-color: #285531;
+  background-color: #b89b5e;
   color:white;
   padding: 1rem;
   border-radius: 5px;
@@ -374,7 +385,7 @@ justify-content: center;
   right: 25px;
 }
 .swiper-button-prev::after{
-  background-color: #285531;
+  background-color: #b89b5e;
   color:white;
   padding: 1rem;
   border-radius: 5px;
@@ -473,8 +484,17 @@ justify-content: center;
 }
 
 .bottom-footer{
-  background-color: #E38A40;
+  background-color: #285531;
   color:white ;
+}
+.bottom-footer svg:hover {
+color: #B89B5E!important;
+}
+.footer-center{
+  max-height: 50px!important;
+}
+.footer-center svg:hover{
+  color: #B89B5E!important;
 }
 .footer-left a {
   text-decoration: none;
@@ -483,7 +503,7 @@ justify-content: center;
 }
 .footer-left a:hover {
   text-decoration: none;
-  color: #808080;
+  color: #B89B5E;
 
 }
 .header-text a{

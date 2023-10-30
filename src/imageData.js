@@ -15,6 +15,18 @@ export const imageData = [
       
     },
     {
+      "date": "2023-09-26",
+      "title":"Bölcsis gyerekek látogatása",
+      "mainimage":"../bolcsis1.jpg",
+      "images": 
+        {
+          "image1": "../bolcsis1.jpg",
+          "image2": "../bolcsis2.jpg",
+          "image3": "../bolcsis3.jpg",
+        }
+      
+    },
+    {
         "date": "2023-09-12",
         "title":"Kirándulás az állatkertbe",
         "mainimage":"../allatkert.jpg",
@@ -41,5 +53,42 @@ export const imageData = [
           "image4": "../varosnap4.jpg",
         }
       
-  }
+  },
+  {
+    "date": "2022-12-06",
+    "title":"Mikulás",
+    "mainimage":"../mikulas1.jpg",
+    "images": 
+      {
+        "image1": "../mikulas1.jpg",
+        "image2": "../mikulas2.jpg",
+        "image3": "../mikulas3.jpg",
+        "image4": "../mikulas4.jpg",
+        "image5": "../mikulas5.jpg",
+        "image6": "../mikulas6.jpg",
+      }
+    
+  },
+  {
+    "date": "2022-12-26",
+    "title":"Karácsony",
+    "mainimage":"../karacsony1.jpg",
+    "images": 
+      {
+        "image1": "../karacsony1.jpg",
+        "image2": "../karacsony2.jpg",
+        "image3": "../karacsony3.jpg",
+        "image4": "../karacsony4.jpg",
+        "image5": "../karacsony5.jpg",
+        "image6": "../karacsony6.jpg",
+        "image7": "../karacsony7.jpg",
+        "image8": "../karacsony8.jpg",
+        "image9": "../karacsony9.jpg",
+        "image10": "../karacsony10.jpg",
+        "image11": "../karacsony11.jpg",
+        "image12": "../karacsony12.jpg",
+        "image13": "../karacsony13.jpg",
+      }
+    
+  },
   ];

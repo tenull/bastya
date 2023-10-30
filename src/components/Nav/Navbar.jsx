@@ -24,6 +24,9 @@ const Nav = styled.nav`
   .logo {
     padding: 0px 0;
   }
+  @media (max-width: 991px) {
+    top: ${({ sticky }) => (sticky ? '0' : '-79px')};
+  }
 `;
 
 const Navbar = () => {
@@ -63,13 +66,11 @@ const Navbar = () => {
         <LogoContainer sticky={sticky}>
 
           <p className='display-5 d-none d-md-block fw-bold mt-4 p-0'>Bástya  Idősotthon</p>
-          <div className="idezet">
+          {/* <div className="idezet">
             <p className='fs-6 fw-bold  text-center d-none d-xs-block'>" Az igazak segítséget kapnak az Úrtól, <br /> erőt a szükség idején." <br />  (Zsoltárok 37:39)</p>
-          </div>
+          </div> */}
           <div className="logo-content">
             <p className='fs-4 d-block d-md-none fw-bold mt-3 pt-2 pb-2 ps-5'>Bástya  Idősotthon</p>
-
-            {/* <p className='fs-6 fw-bold text-center d-none d-lg-block'>Szolgálati telefonszám <br /> +3630-162-8381</p> */}
           </div>
         </LogoContainer>
       </div>

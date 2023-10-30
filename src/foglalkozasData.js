@@ -41,5 +41,35 @@ export const foglalkozasData = [
             "image4": "../kezugyesseg4.jpg",
           }
         
-    }
+    },
+    {
+      "date": "2023-03-06",
+      "title":"Agytorna,ügyességi",
+      "mainimage":"../agytorna.jpg",
+      "images": 
+        {
+          "image1": "../agytorna.jpg",
+          "image2": "../agytorna2.jpg",
+          "image3": "../agytorna3.jpg",
+          "image4": "../agytorna4.jpg",
+          "image5": "../agytorna5.jpg",
+          "image6": "../agytorna6.jpg",
+        }
+      
+  },
+  {
+    "date": "2023-03-06",
+    "title":"Tavaszi napsütésben",
+    "mainimage":"../pihenes.jpg",
+    "images": 
+      {
+        "image1": "../pihenes.jpg",
+        "image2": "../pihenes2.jpg",
+        "image3": "../pihenes3.jpg",
+        "image4": "../pihenes4.jpg",
+        "image5": "../pihenes5.jpg",
+        "image6": "../pihenes6.jpg",
+      }
+    
+},
     ];

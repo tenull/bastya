@@ -7,12 +7,13 @@ import Dropdown from 'react-dropdown';
 
 const Ul = styled.ul`
   position: sticky;
+  position: -webkit-sticky!important;
   top: 0;
   border-radius: 3px;
   list-style: none!important;
   display: flex;
   flex-flow: row nowrap;
-  background-color: #285531;
+  background-color: #b89b5e;
   margin:0;
   padding: 2rem 4rem;
   gap: 4rem;
@@ -22,7 +23,7 @@ const Ul = styled.ul`
     list-style: none!important;
     text-decoration:none;
     transition: color 0.3s ease-in-out;
-    font-weight:bold
+    font-weight:bold;
   }
   a:hover{
     color:#808080;
@@ -52,29 +53,29 @@ const Ul = styled.ul`
   }
 `;
 
-const RightNav = ({ open }) => {
+const RightNav = ({ open,closeMenu }) => {
 
 
   return (
     <div className="rightnav-container">
     <div className="rightnav">
-      <Ul open={open}>
+      <Ul open={open} >
 
-        <Link to="/" style={{ }}>Főoldal</Link>
-        <Link to="/rolunk" style={{ }}>Rólunk</Link>
-        <div className='dropdown'> <Link to="/szolgaltatasok" style={{ }}> Szolgáltatások
+        <Link to="/" style={{ }} onClick={closeMenu}>Főoldal</Link>
+        <Link to="/rolunk" style={{ }}onClick={closeMenu} >Rólunk</Link>
+        <div className='dropdown'> <Link to="/szolgaltatasok" style={{paddingBottom:'2.2rem' }} onClick={closeMenu}> Szolgáltatások
           <div className="dropdown-content">
             <div className="dropdown-test">
-              <Link to="/galeria" style={{ }}>Gondozási Szolgáltatások</Link>
-              <Link to="/form" style={{ }}>Egészségügyi Szolgáltatások</Link>
+              <Link to="/galeria" style={{ }} onClick={closeMenu}>Gondozási Szolgáltatások</Link>
+              <Link to="/form" style={{ }} onClick={closeMenu}>Egészségügyi Szolgáltatások</Link>
               {/* <Link to="/kapcsolat" style={{ }}>Kapcsolat</Link> */}
             </div>
           </div>
         </Link>
         </div>
-        <Link to="/galeria" style={{ }}>Galéria</Link>
-        <Link to="/form" style={{ }}>Formanyomtatványok</Link>
-        <Link to="/kapcsolat" style={{ }}>Kapcsolat</Link>
+        <Link to="/galeria" style={{ }} onClick={closeMenu}>Galéria</Link>
+        <Link to="/form" style={{ }} onClick={closeMenu} >Formanyomtatványok</Link>
+        <Link to="/kapcsolat" style={{ }} onClick={closeMenu}>Kapcsolat</Link>
 
       </Ul>
     </div>

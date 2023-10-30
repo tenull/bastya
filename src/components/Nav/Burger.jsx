@@ -6,8 +6,8 @@ const StyledBurger = styled.div`
   width: 2rem;
   height: 2rem;
   position: fixed;
-  top: 15px;
-  right: 20px;
+  top: 18px;
+  right: 33px;
   z-index: 20;
   display: none;
   @media (max-width: 768px) {
@@ -38,15 +38,21 @@ const StyledBurger = styled.div`
 
 const Burger = () => {
   const [open, setOpen] = useState(false)
+
+  const handleMenuItemClick = () => {
+    setOpen(false);
+    window.scrollTo(0, 0);
+  };
   
   return (
     <>
       <StyledBurger className='burger' open={open} onClick={() => setOpen(!open)}>
-        <div />
+        <div  />
         <div />
         <div />
       </StyledBurger>
-      <RightNav open={open}/>
+      
+      <RightNav open={open} closeMenu={handleMenuItemClick}/>
     </>
   )
 }
