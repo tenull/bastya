@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import DownloadIcon from '@mui/icons-material/Download';
 
 const Form = () => {
     const downLoad = '../../Kérelem.pdf'
@@ -10,7 +11,7 @@ const Form = () => {
     return (
 
         <div className="form-main">
-            <div className="form-header" style={{ backgroundImage: 'url(../virag3.jpg)', width: '100%', height: '400px', backgroundPosition: '50% 73%', backgroundSize: 'cover' }}>
+            <div className="form-header" style={{ backgroundImage: 'url(../virag3.jpg)', width: '100%', height: '300px', backgroundPosition: '50% 73%', backgroundSize: 'cover' }}>
                 <Container>
                     <div className="d-flex justify-content-center">
                         <h1 className="display-4 textshadow pt-5 text-white">Formanyomtatványok
@@ -31,25 +32,38 @@ const Form = () => {
                     </div>
                 </Breadcrumb>
             </div>
-            <div className="container mt-5 mb-5 form-container">
-                Kérelem az idősek otthona, mint a személyes gondozást nyújtó szociális ellátás igénybevételéhez
-                <a href={downLoad} target="_blank"><PictureAsPdfIcon></PictureAsPdfIcon></a>
+            <div className="container form-cont mt-5 mb-5 pb-5 form-container d-flex flex-wrap border-bottom">
+                <div className="col-lg-6">
+                    <p className="fs-5"> Kérelem</p>
+                    <p className="fs-6">  az idősek otthona, mint a személyes gondozást nyújtó szociális ellátás igénybevételéhez</p>
+                    </div>
+                <div className="col-lg-6 d-flex justify-content-center align-items-center "> <a href={downLoad} target="_blank"><DownloadIcon style={{fontSize:'40px', color:'black'}}/></a></div>
+               
+               
 
             </div>
-            <div className="container mt-5 mb-5 form-container">
-           Egészségi állapotra vonatkozó igazolás
-                <a href={downLoad2} target="_blank"><PictureAsPdfIcon></PictureAsPdfIcon></a>
+            <div className="container form-cont mt-5 mb-5 pb-5 form-container d-flex flex-wrap border-bottom">
+            <div className="col-lg-6">
+                <p className="fs-5"> Egészségi állapotra vonatkozó igazolás</p>
+                <p className="fs-6">(a háziorvos, kezelőorvos, vagy kórházi kezelés esetén a kórházi osztályos orvos tölti ki)</p>
+                </div>
+            <div className="col-lg-6 form-cont d-flex justify-content-center align-items-center">  <a href={downLoad2} target="_blank"><DownloadIcon style={{fontSize:'40px', color:'black'}}/></a></div>
+               
 
             </div>
-            <div className="container mt-5 mb-5 form-container">
-            Értékelő adatlap
-                <a href={downLoad3} target="_blank"><PictureAsPdfIcon></PictureAsPdfIcon></a>
+            <div className="container form-cont mt-5 mb-5 pb-5 form-container d-flex flex-wrap border-bottom">
+            <div className="col-lg-6"><p className="fs-5">  Értékelő adatlap</p></div>
+            <div className="col-lg-6 d-flex justify-content-center align-items-center"> <a href={downLoad3} target="_blank"><DownloadIcon style={{fontSize:'40px', color:'black'}}/></a></div>
+  
 
             </div>
-            <div className="container mt-5 mb-5 form-container">
-                Megállapodás
+            <div className="container form-cont mt-5 mb-5  form-container d-flex flex-wrap ">
+            <div className="col-lg-6">
+                <p className="fs-5">  Megállapodás</p>
                 <p className="fs-6">A Magyarországi Református Egyház missziójának egyik alapvető lényegi eleme a szenvedő embertárs segítése, melynek eszköze a szeretetszolgálat. Ennek jegyében fő feladatunknak tartjuk a rászoruló ember humanitárius segítését, ellátását. Az alábbi megállapodás ebben a szellemben kerül megkötésre.</p>
-                <a href={downLoad4} target="_blank"><PictureAsPdfIcon></PictureAsPdfIcon></a>
+                </div>
+            <div className="col-lg-6 d-flex justify-content-center align-items-center">  <a href={downLoad4} target="_blank"><DownloadIcon style={{fontSize:'40px', color:'black'}}/></a></div>
+             
 
             </div>
         </div>

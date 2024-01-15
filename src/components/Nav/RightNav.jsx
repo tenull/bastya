@@ -26,11 +26,14 @@ const Ul = styled.ul`
     font-weight:bold;
   }
   a:hover{
-    color:#808080;
+    color:#285531;
     // text-decoration:underline;
     
     
   }
+  @media (min-width: 768px) {
+
+   }
   
   @media (max-width: 768px) {
     z-index:10;
@@ -44,11 +47,13 @@ const Ul = styled.ul`
     width: 300px;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
+    a:hover{
+      color:#b89b5e;
+      // text-decoration:underline;
+
+    }
     li {
       color: #C6AD8F;
-    }
-    li:hover{
-      color:red;
     }
   }
 `;
@@ -66,8 +71,8 @@ const RightNav = ({ open,closeMenu }) => {
         <div className='dropdown'> <Link to="/szolgaltatasok" style={{paddingBottom:'2.2rem' }} onClick={closeMenu}> Szolgáltatások
           <div className="dropdown-content">
             <div className="dropdown-test">
-              <Link to="/galeria" style={{ }} onClick={closeMenu}>Gondozási Szolgáltatások</Link>
-              <Link to="/form" style={{ }} onClick={closeMenu}>Egészségügyi Szolgáltatások</Link>
+              <Link to="/gondozasi" style={{ }} onClick={closeMenu}>Gondozási Szolgáltatások</Link>
+              <Link to="/egeszsegugyi" style={{ }} onClick={closeMenu}>Egészségügyi Szolgáltatások</Link>
               {/* <Link to="/kapcsolat" style={{ }}>Kapcsolat</Link> */}
             </div>
           </div>

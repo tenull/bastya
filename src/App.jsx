@@ -11,6 +11,8 @@ import Kapcsolat from './components/Kapcsolat';
 import Footer from './components/Footer';
 import Mainpage from './components/Mainpage';
 import Imagelist from './components/Imagelist';
+import Egeszsegugyi from './components/Egeszsegugyi';
+import Gondozasi from './components/Gondozasi';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
       <Route path="/" element={<Mainpage/>} ></Route>
       <Route path="/rolunk"element={<Rolunk/>} > </Route>
       <Route path="/szolgaltatasok"element={<Szolgaltatasok/>} > </Route>
+      <Route path="/gondozasi"element={<Egeszsegugyi/>} > </Route>
+      <Route path="/egeszsegugyi"element={<Gondozasi/>} > </Route>
       <Route path="/galeria"element={<Galeria/>} > </Route>
       <Route path="/galeria/:id"element={<Imagelist/>} > </Route>
       <Route path="/form"element={<Form/>} > </Route>

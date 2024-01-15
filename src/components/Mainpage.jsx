@@ -48,7 +48,7 @@ const Mainpage = () => {
           <Container>
             <div className='swiper-container'>
               <Container>
-                <div data-aos="zoom-in"><p className='textshadow2 display-4'> 2023</p></div>
+                <div data-aos="zoom-in"><p className='textshadow2 display-4'>Mulatozás</p></div>
               </Container>
             </div>
           </Container>
@@ -89,12 +89,14 @@ const Mainpage = () => {
           bottom: 50,
           right: 30,
           cursor: 'pointer',
-          transitionDuration: '0.1s',
+          transitionDuration: '0s',
           transitionTimingFunction: 'linear',
           transitionDelay: '0s',
 
         }}
         showUnder={150}>
+
+          
         <div className='test' style={{ zIndex: '100' }}>
           <span className='test' style={{ zIndex: '100' }}><ArrowUpwardIcon style={{ zIndex: '1000000' }} /></span></div>
       </ScrollToTop>
@@ -105,7 +107,7 @@ const Mainpage = () => {
       <div className="container mainpage-header mt-5">
         <p className='display-5 foglal m-0 text-center'>Foglalkozások</p>
       </div>
-      <div className="mainpage-container container mt-5 mb-5 d-flex flex-wrap">
+      <div className="mainpage-container ps-5 pe-5 container mt-5 mb-5 d-flex flex-wrap">
         {foglalkozasData.map((data, index) => (
           <div key={index} className="mainpage-container">
             <div className="card1 d-flex">

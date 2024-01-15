@@ -70,7 +70,8 @@ const Navbar = () => {
             <p className='fs-6 fw-bold  text-center d-none d-xs-block'>" Az igazak segítséget kapnak az Úrtól, <br /> erőt a szükség idején." <br />  (Zsoltárok 37:39)</p>
           </div> */}
           <div className="logo-content">
-            <p className='fs-4 d-block d-md-none fw-bold mt-3 pt-2 pb-2 ps-5'>Bástya  Idősotthon</p>
+            <a className='' href="/" style={{textDecoration:'none',color:'white'}}>
+            <p className='fs-4 d-block d-md-none fw-bold mt-3 pt-2 pb-2 ps-5'>Bástya  Idősotthon</p></a>
           </div>
         </LogoContainer>
       </div>
