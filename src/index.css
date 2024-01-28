@@ -466,19 +466,32 @@ img {
 .kep {
   transition: 0.3s ease-in-out !important;
 }
+.img-container-zoom {
+  max-width: 300px!important;
+  max-height: 300px!important;
+  overflow: hidden; 
+}
 
-.keep2:hover {
+.img-container-zoom .img-zoom {
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center center;
+}
+
+.img-container-zoom:hover .img-zoom,
+.img-container-zoom:focus .img-zoom {
   transform: scale(1.05);
 }
+
 .keep2 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .keep2 {
-  width: 250px;
-  height: 250px;
-  transition: transform 0.3s ease-in-out;
+  width: 300px!important;
+  height: 300px!important;
+ 
 }
 
 .bottom-footer {
@@ -510,4 +523,9 @@ img {
 }
 .header-text li {
   font-size: 20px;
+}
+
+.img-zoom{
+  max-width: 300px;
+  max-height: 300px;
 }

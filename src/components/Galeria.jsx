@@ -48,7 +48,7 @@ const Galeria = () => {
 
     return (
         <div className="galeriatop">
-            <div className="galeria-header" style={{ backgroundImage: 'url(../virag2.jpg)', width: '100%', height: '300px', backgroundPosition: '50% 60%',backgroundSize: 'cover' }}>
+            <div className="galeria-header" style={{ backgroundImage: 'url(../virag2.jpg)', width: '100%', height: '300px', backgroundPosition: '50% 60%', backgroundSize: 'cover' }}>
                 <Container>
                     <div className="d-flex justify-content-center">
                         <h1 className="display-4 pt-5  textshadow text-white " style={{}}>Galéria
@@ -83,17 +83,18 @@ const Galeria = () => {
                                 <div className="col-lg-4 mt-3 d-flex flex-column align-items-center " key={item.title}>
                                     <p className="fs-5 text-center m-0">{item.date}</p>
                                     <p className="fs-5 text-center m-0">{item.title}</p>
-
-                                    <img
-                                        src={`${item.mainimage}?w=164&h=164&fit=crop&auto=format`}
-                                        onClick={() => handleShow(item)}
-                                        alt={item.title}
-                                        loading="lazy"
-                                        // style={{ minWidth: '200px', minHeight: '200px', maxWidth: '300px', maxHeight: '200px', cursor: 'pointer' }}
-                                        style={{ width: '300px', height: '300px',objectFit: 'cover', cursor: 'pointer' }}
-                                        className="img-fluid rounded keep2"
-                                    />
-
+                                    <div className="img-container-zoom">
+                                        <div className="img-zoom">
+                                            <img
+                                                src={`${item.mainimage}?w=164&h=164&fit=crop&auto=format`}
+                                                onClick={() => handleShow(item)}
+                                                alt={item.title}
+                                                loading="lazy"
+                                                style={{ width: '300px', height: '300px', objectFit: 'cover', cursor: 'pointer' }}
+                                                className="img-fluid rounded keep2"
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
                             ))}
                         </Container>
@@ -109,24 +110,29 @@ const Galeria = () => {
                                         {/* <p className="fs-5 text-center m-0">{item.date}</p> */}
                                         <p className="fs-5 text-center m-0">{item.title}</p>
                                         <div
-    onClick={() => handleShow(item)}
-    className="img-container"
-    style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '300px',
-        height: '300px',
-    }}
->
-    <img
-        src={`${item.mainimage}?w=164&h=164&fit=crop&auto=format`}
-        alt={item.title}
-        loading="lazy"
-        style={{ width: '100%', height: '100%',objectFit: 'cover', cursor: 'pointer' }}
-        className="img-fluid rounded keep2"
-    />
-</div>
+                                            onClick={() => handleShow(item)}
+                                            className="img-container"
+                                            style={{
+                                                display: 'flex',
+                                                justifyContent: 'center',
+                                                alignItems: 'center',
+                                                width: '300px',
+                                                height: '300px',
+                                            }}
+                                        >
+                                            <div className="img-container-zoom">
+                                                <div className="img-zoom">
+
+
+                                                    <img
+                                                        src={`${item.mainimage}?w=164&h=164&fit=crop&auto=format`}
+                                                        alt={item.title}
+                                                        loading="lazy"
+                                                        style={{ width: '100%', height: '100%', objectFit: 'cover', cursor: 'pointer' }}
+                                                        className="img-fluid rounded keep2"
+                                                    />     </div>
+                                            </div>
+                                        </div>
 
                                     </div>
                                 ))}
@@ -143,7 +149,7 @@ const Galeria = () => {
 
                             <Carousel
                                 images={actualData.images && Object.keys(actualData.images).map((key) => ({ src: actualData.images[key] }))}
-                                startIndex={0} 
+                                startIndex={0}
                                 style={carouselStyle}
                             />
                         </Modal.Body>
