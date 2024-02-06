@@ -85,9 +85,15 @@ const Navbar = () => {
 
       <div className="logo">
         <LogoContainer sticky={sticky}>
+        <a
+              className=""
+              href="/"
+              style={{ textDecoration: 'none', color: 'black' }}
+            >
           <p className="display-5 d-none d-md-block fw-bold mt-4 p-0">
             Bástya Idősotthon
           </p>
+          </a>
           <div className="logo-content">
             <a
               className=""

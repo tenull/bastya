@@ -71,7 +71,7 @@ const RightNav = ({ open, closeMenu }) => {
               {' '}
               Szolgáltatások
             </Link>
-            <div className="dropdown-content">
+            {/* <div className="dropdown-content">
               <div className="dropdown-test">
                 <Link to="/gondozasi" style={{}} onClick={closeMenu}>
                   Gondozási Szolgáltatások
@@ -79,9 +79,9 @@ const RightNav = ({ open, closeMenu }) => {
                 <Link to="/egeszsegugyi" style={{}} onClick={closeMenu}>
                   Egészségügyi Szolgáltatások
                 </Link>
-                {/* <Link to="/kapcsolat" style={{ }}>Kapcsolat</Link> */}
+                
               </div>
-            </div>
+            </div> */}
           </div>
 
           <Link to="/galeria" style={{}} onClick={closeMenu}>

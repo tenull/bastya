@@ -146,7 +146,7 @@ const Mainpage = () => {
         </p>
       </div>
 
-      <div className="container mainpage-header mt-5">
+      {/* <div className="container mainpage-header mt-5">
         <p className="display-5 foglal m-0 text-center">Foglalkozások</p>
       </div>
       <div className="mainpage-container ps-5 pe-5 container mt-5 mb-5 d-flex flex-wrap">
@@ -183,7 +183,7 @@ const Mainpage = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

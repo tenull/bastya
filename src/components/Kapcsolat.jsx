@@ -135,7 +135,7 @@ const Kapcsolat = () => {
   });
 
   const onLoad = React.useCallback(function callback(map) {
-    // This is just an example of getting and using the map instance!!! don't just blindly copy!
+    
     const bounds = new window.google.maps.LatLngBounds(center);
     map.fitBounds(bounds);
 
@@ -294,7 +294,7 @@ const Kapcsolat = () => {
                   )}
                   <input
                     type="text"
-                    className="form-control border-bottom rounded-0 p-0 text-white pb-3 "
+                    className="form-control border-bottom rounded-0 p-0 text-white pb-3 pt-3"
                     placeholder="Vezetéknév*"
                     aria-label="Last name"
                     value={lastName}
@@ -309,7 +309,7 @@ const Kapcsolat = () => {
                   )}
                   <input
                     type="text"
-                    className="form-control border-bottom rounded-0 p-0 text-white pb-3"
+                    className="form-control border-bottom rounded-0 p-0 text-white pb-3 pt-3"
                     placeholder="Keresztnév*"
                     aria-label="First name"
                     value={firstName}

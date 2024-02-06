@@ -46,7 +46,7 @@ const Form = () => {
       </div>
       <div className="container form-cont mt-5 mb-5 pb-5 form-container d-flex flex-wrap border-bottom">
         <div className="col-lg-6">
-          <p className="fs-5"> Kérelem</p>
+          <p className="fs-5 fw-bold"> Kérelem</p>
           <p className="fs-6">
             {' '}
             az idősek otthona, mint a személyes gondozást nyújtó szociális
@@ -62,7 +62,7 @@ const Form = () => {
       </div>
       <div className="container form-cont mt-5 mb-5 pb-5 form-container d-flex flex-wrap border-bottom">
         <div className="col-lg-6">
-          <p className="fs-5"> Egészségi állapotra vonatkozó igazolás</p>
+          <p className="fs-5 fw-bold"> Egészségi állapotra vonatkozó igazolás</p>
           <p className="fs-6">
             (a háziorvos, kezelőorvos, vagy kórházi kezelés esetén a kórházi
             osztályos orvos tölti ki)
@@ -77,7 +77,7 @@ const Form = () => {
       </div>
       <div className="container form-cont mt-5 mb-5 pb-5 form-container d-flex flex-wrap border-bottom">
         <div className="col-lg-6">
-          <p className="fs-5"> Értékelő adatlap</p>
+          <p className="fs-5 fw-bold"> Értékelő adatlap</p>
         </div>
         <div className="col-lg-6 d-flex justify-content-center align-items-center">
           {' '}
@@ -88,7 +88,7 @@ const Form = () => {
       </div>
       <div className="container form-cont mt-5 mb-5  form-container d-flex flex-wrap ">
         <div className="col-lg-6">
-          <p className="fs-5"> Megállapodás</p>
+          <p className="fs-5 fw-bold"> Megállapodás</p>
           <p className="fs-6">
             A Magyarországi Református Egyház missziójának egyik alapvető
             lényegi eleme a szenvedő embertárs segítése, melynek eszköze a
