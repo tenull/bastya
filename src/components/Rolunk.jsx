@@ -25,13 +25,13 @@ const Rolunk = () => {
           <Breadcrumb className="container">
             <div className="bread d-flex flex-wrap">
               <div className="one">
-                <p className="fs-5 fw-bold m-0 pt-2">Rólunk</p>
+                <p className="fs-5 fw-bold m-0 d-none d-sm-block  text-black">Rólunk</p>
               </div>
               <div className="sec d-flex alig-items-center header-text">
-                <Breadcrumb.Item className="d-flex align-items-center" href="/">
+                <Breadcrumb.Item className="" href="/">
                   Főoldal
                 </Breadcrumb.Item>
-                <Breadcrumb.Item className="d-flex align-items-center" active>
+                <Breadcrumb.Item className="" active>
                   Rólunk
                 </Breadcrumb.Item>
               </div>

@@ -51,7 +51,7 @@ const Mainpage = () => {
           style={{
             backgroundImage: 'url(../mulatozas.jpg)',
             height: '650px',
-            backgroundSize: '100%',
+            backgroundSize: 'cover',
             backgroundPosition: '50% 15%',
           }}
         >
@@ -70,7 +70,7 @@ const Mainpage = () => {
           style={{
             backgroundImage: 'url(../agytorna6.jpg)',
             height: '650px',
-            backgroundSize: '100%',
+            backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         >
@@ -121,7 +121,7 @@ const Mainpage = () => {
         </SwiperSlide>
       </Swiper>
 
-      <ScrollToTop
+      {/* <ScrollToTop
         sx={{
           position: 'fixed',
           bottom: 50,
@@ -138,8 +138,8 @@ const Mainpage = () => {
             <ArrowUpwardIcon style={{ zIndex: '1000000' }} />
           </span>
         </div>
-      </ScrollToTop>
-      <div data-aos="zoom-in" className="idezet-mainpage  pt-5 ">
+      </ScrollToTop> */}
+      <div data-aos="zoom-in" className="idezet-mainpage  mt-5 mb-5 ">
         <p className="display-3 fw-bold text-center ">
           " Az igazak segítséget kapnak az Úrtól, <br /> erőt a szükség idején."{' '}
           <br /> (Zsoltárok 37:39)

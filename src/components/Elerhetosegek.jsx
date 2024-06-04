@@ -8,9 +8,7 @@ const Elerhetosegek = () => {
         <div className="elerhetosegek">
             <div className="elerhetosegek-container pb-3 container d-flex flex-wrap">
     
-                    <div className="otthonunk col-lg-4 text-center" data-aos="zoom-out-up"
-                    data-aos-delay="100"
-                    data-aos-offset="0">
+                    <div className="otthonunk col-lg-4 text-center" >
                         <div className="icon">
                             <LocationOnIcon fontSize='large' />
                         </div>
@@ -23,9 +21,7 @@ const Elerhetosegek = () => {
                 </div>
   
 
-                    <div className="telefonszam col-lg-4 text-center" data-aos="zoom-out-up"
-                    data-aos-delay="200"
-                    data-aos-offset="0">
+                    <div className="telefonszam col-lg-4 text-center" >
                         <div className="icon">
                             <PhoneIcon fontSize='large' />
                         </div>
@@ -35,9 +31,7 @@ const Elerhetosegek = () => {
                     </div>
             
 
-                <div className="ugyfelfogadas col-lg-4 text-center" data-aos="zoom-out-up"
-                    data-aos-delay="300"
-                    data-aos-offset="0">
+                <div className="ugyfelfogadas col-lg-4 text-center">
                     <div className="icon">
                         <AccessTimeIcon fontSize='large' />
                     </div>

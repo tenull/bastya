@@ -31,7 +31,7 @@ const Form = () => {
         <Breadcrumb className="container">
           <div className="bread d-flex flex-wrap">
             <div className="one">
-              <p className="fs-5 fw-bold m-0 pt-2">Formanyomtatványok</p>
+              <p className="fs-5 fw-bold m-0 d-none d-md-block  text-black">Formanyomtatványok</p>
             </div>
             <div className="sec d-flex alig-items-center header-text">
               <Breadcrumb.Item className="d-flex align-items-center" href="/">

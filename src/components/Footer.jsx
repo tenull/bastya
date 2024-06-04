@@ -37,25 +37,30 @@ const Footer = () => {
     setMap(null);
   }, []);
 
+  const handleTopScroll = () => {
+    window.scrollTo(0, 0);
+  };
+  
+
   return (
     <div className="footer">
       <div className="footercontent">
         <div className="footer-main container d-flex flex-wrap">
           <div className="footer-left d-flex flex-column col-lg-3">
-            <Link to="/rolunk" style={{}}>
+            <Link to="/rolunk" onClick={handleTopScroll} style={{}}>
               Rólunk
             </Link>
-            <Link to="/szolgaltatasok" style={{}}>
+            <Link to="/szolgaltatasok" onClick={handleTopScroll} style={{}}>
               {' '}
               Szolgáltatások
             </Link>
-            <Link to="/galeria" style={{}}>
+            <Link to="/galeria" onClick={handleTopScroll} style={{}}>
               Galéria
             </Link>
-            <Link to="/form" style={{}}>
+            <Link to="/form" onClick={handleTopScroll} style={{}}>
               Formanyomtatványok
             </Link>
-            <Link to="/kapcsolat" style={{}}>
+            <Link to="/kapcsolat" onClick={handleTopScroll} style={{}}>
               Kapcsolat
             </Link>
           </div>

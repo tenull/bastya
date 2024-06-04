@@ -23,9 +23,9 @@ const Galeria = () => {
         const handleResize = () => {
             const windowWidth = window.innerWidth;
             if (windowWidth < 768) {
-                setCarouselStyle({ height: "600px", width: "500px" });
+                setCarouselStyle({ height: "600px", width: "500px", objectFit:'contain'  });
             } else {
-                setCarouselStyle({ height: "500px", width: "800px" });
+                setCarouselStyle({ height: "500px", width: "800px",objectFit:'contain'  });
             }
         };
 
@@ -63,11 +63,11 @@ const Galeria = () => {
                     <Breadcrumb className="container">
                         <div className="bread d-flex flex-wrap">
                             <div className="one">
-                                <p className="fs-5 fw-bold m-0 pt-2 text-black">Galéria</p>
+                                <p className="fs-5 fw-bold m-0 d-none d-md-block  text-black">Galéria</p>
                             </div>
-                            <div className="sec d-flex alig-items-center header-text">
-                                <Breadcrumb.Item className="d-flex align-items-center" href="/">Főoldal</Breadcrumb.Item>
-                                <Breadcrumb.Item className="d-flex align-items-center" active>Galéria</Breadcrumb.Item>
+                            <div className="sec d-flex aling-items-end  header-text">
+                                <Breadcrumb.Item className="" href="/">Főoldal</Breadcrumb.Item>
+                                <Breadcrumb.Item className="" active>Galéria</Breadcrumb.Item>
                             </div>
                         </div>
                     </Breadcrumb>
@@ -90,7 +90,7 @@ const Galeria = () => {
                                                 onClick={() => handleShow(item)}
                                                 alt={item.title}
                                                 loading="lazy"
-                                                style={{ width: '300px', height: '300px', objectFit: 'cover', cursor: 'pointer' }}
+                                                style={{ width: '300px', height: '300px', objectFit: 'cover',objectPosition:'top', cursor: 'pointer' }}
                                                 className="img-fluid rounded keep2"
                                             />
                                         </div>
@@ -128,7 +128,7 @@ const Galeria = () => {
                                                         src={`${item.mainimage}?w=164&h=164&fit=crop&auto=format`}
                                                         alt={item.title}
                                                         loading="lazy"
-                                                        style={{ width: '100%', height: '100%', objectFit: 'cover', cursor: 'pointer' }}
+                                                        style={{ width: '100%', height: '100%', objectFit: 'cover',objectPosition:'top', cursor: 'pointer' }}
                                                         className="img-fluid rounded keep2"
                                                     />     </div>
                                             </div>
@@ -148,6 +148,7 @@ const Galeria = () => {
                         <Modal.Body className="d-flex flex-wrap justify-content-center">
 
                             <Carousel
+                                className="carousel-custom"
                                 images={actualData.images && Object.keys(actualData.images).map((key) => ({ src: actualData.images[key] }))}
                                 startIndex={0}
                                 style={carouselStyle}

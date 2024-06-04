@@ -196,7 +196,7 @@ const Kapcsolat = () => {
         <Breadcrumb className="container">
           <div className="bread d-flex flex-wrap">
             <div className="one">
-              <p className="fs-5 fw-bold m-0 pt-2">Kapcsolat</p>
+              <p className="fs-5 fw-bold m-0 d-none d-md-block  text-black">Kapcsolat</p>
             </div>
             <div className="sec d-flex alig-items-center header-text">
               <Breadcrumb.Item className="d-flex align-items-center" href="/">
@@ -234,15 +234,15 @@ const Kapcsolat = () => {
         <div className="kapcs-conten mb-5 mt-5 d-flex flex-wrap justify-content-evenly">
           <div className="elso">
             <p className="fs-4 m-0">Intézményvezető</p>
-            <p>Kiss-Csáki Beatrix</p>
+            <p className='text-center'>Kiss-Csáki Beatrix</p>
           </div>
           <div className="masodik">
             <p className="fs-4 m-0">Intézményvezető-helyettes</p>
-            <p>Pallay Zsófia</p>
+            <p className='text-center'>Pallay Zsófia</p>
           </div>
           <div className="harmadik">
             <p className="fs-4 m-0">Intézmény ápoló</p>
-            <p>Koleszár Ferenc</p>
+            <p className='text-center'>Koleszár Ferenc</p>
           </div>
         </div>
         {isLoaded ? (
