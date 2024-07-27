@@ -10,6 +10,7 @@ import { Container } from "react-bootstrap";
 import { Breadcrumb } from "react-bootstrap";
 import Carousel from 'react-gallery-carousel';
 import 'react-gallery-carousel/dist/index.css';
+import { Link } from "react-router-dom";
 const Galeria = () => {
     const [image, setImage] = useState([])
     const [show, setShow] = useState(false);
@@ -49,7 +50,7 @@ const Galeria = () => {
     return (
         <div className="galeriatop">
             <div className="galeria-header" style={{ backgroundImage: 'url(../virag2.jpg)', width: '100%', height: '300px', backgroundPosition: '50% 60%', backgroundSize: 'cover' }}>
-                <Container>
+            <Container className='pt-4'>
                     <div className="d-flex justify-content-center">
                         <h1 className="display-4 pt-5  textshadow text-white " style={{}}>Galéria
 
@@ -59,14 +60,14 @@ const Galeria = () => {
 
             </div>
             <div className="galeria-main">
-                <div className="form-content">
+                <div className="form-content" style={{maxHeight:'36px'}}>
                     <Breadcrumb className="container">
                         <div className="bread d-flex flex-wrap">
-                            <div className="one">
-                                <p className="fs-5 fw-bold m-0 d-none d-md-block  text-black">Galéria</p>
-                            </div>
+                          
                             <div className="sec d-flex aling-items-end  header-text">
-                                <Breadcrumb.Item className="" href="/">Főoldal</Breadcrumb.Item>
+                                <Breadcrumb.Item className="" href="/">
+                                <Link to='/'> Főoldal</Link> 
+                                </Breadcrumb.Item>
                                 <Breadcrumb.Item className="" active>Galéria</Breadcrumb.Item>
                             </div>
                         </div>
@@ -139,11 +140,12 @@ const Galeria = () => {
                             </Container>
                         </Container>
                     </div>
-                    <Modal show={show} onHide={handleClose} backdrop="static"
+                    <Modal show={show} onHide={handleClose} 
+                        // backdrop="static"
                         keyboard={false}
                         size="lg">
-                        <Modal.Header closeButton>
-                            <Modal.Title className="d-flex justify-content-center ps-5">{actualData.title}</Modal.Title>
+                        <Modal.Header className="d-flex flex-column-reverse align-items-center pb-0" closeButton>
+                            <Modal.Title className="d-flex flex-column align-items-center fw-bold">{actualData.title}</Modal.Title>
                         </Modal.Header>
                         <Modal.Body className="d-flex flex-wrap justify-content-center">
 

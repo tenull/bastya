@@ -29,15 +29,15 @@ a {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: 8.5rem;
+    margin-top: 6.8rem;
     margin-bottom: 5rem;
   }
   .szolg-main {
-    margin-top: 8.5rem;
+    margin-top: 6.8rem;
     margin-bottom: 5rem;
   }
   .form-main {
-    margin-top: 8.5rem;
+    margin-top: 6.8rem;
     margin-bottom: 5rem;
   }
   /* .form-main a{
@@ -55,9 +55,6 @@ font-size: 20px;
     justify-content: space-between;
     align-items: center;
   }
-  .form-content {
-    border-bottom: 1px solid grey;
-  }
   .sec ::before {
     padding-right: 5px;
     color: #4a3429 !important;
@@ -71,12 +68,12 @@ font-size: 20px;
   }
 
   .kapcs-container {
-    margin-top: 8.5rem;
+    margin-top: 6.8rem;
     margin-bottom: 5rem;
   }
 
   .galeriatop {
-    margin-top: 8.5rem;
+    margin-top: 6.8rem;
   }
 }
 
@@ -224,7 +221,7 @@ font-size: 20px;
 }
 
 .mainpage {
-  margin-top: 8rem;
+  margin-top: 6.8rem;
 }
 
 .dropdown {
@@ -540,3 +537,9 @@ img {
   max-height: 300px;
 }
 
+.form-content {
+  border-bottom: 1px solid grey;
+}
+.header-contact a:hover{
+color: #b89b5e!important;
+}

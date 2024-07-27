@@ -5,7 +5,7 @@ import { Breadcrumb } from 'react-bootstrap';
 import Phone from '@mui/icons-material/Phone';
 import { Mail } from '@mui/icons-material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-
+import { Link } from 'react-router-dom';
 const Kapcsolat = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -186,21 +186,19 @@ const Kapcsolat = () => {
           backgroundSize: 'cover',
         }}
       >
-        <Container>
+        <Container className='pt-4'>
           <div className="d-flex justify-content-center">
             <h1 className="display-4 textshadow pt-5 text-white">Kapcsolat</h1>
           </div>
         </Container>
       </div>
-      <div className="form-content">
+      <div className="form-content" style={{maxHeight:'36px'}}>
         <Breadcrumb className="container">
           <div className="bread d-flex flex-wrap">
-            <div className="one">
-              <p className="fs-5 fw-bold m-0 d-none d-md-block  text-black">Kapcsolat</p>
-            </div>
+           
             <div className="sec d-flex alig-items-center header-text">
               <Breadcrumb.Item className="d-flex align-items-center" href="/">
-                Főoldal
+              <Link to='/'> Főoldal</Link> 
               </Breadcrumb.Item>
               <Breadcrumb.Item className="d-flex align-items-center" active>
                 Kapcsolat
@@ -225,10 +223,10 @@ const Kapcsolat = () => {
           </p>
           <p className="fs-6 mb-1">
             {' '}
-            <Phone></Phone> +36 30 162 8381
+            <a style={{textDecoration:'none', color:'white'}}href="tel:+36301628381"> <Phone/> +36 30-162-8381</a>
           </p>
           <p className="fs-6">
-            <Mail></Mail> bastyaidosotthon@gmail.com
+          <a style={{textDecoration:'none', color:'white'}}href="mailto:bastyaidosotthon@gmail.com"><Mail/>bastyaidosotthon@gmail.com</a>
           </p>
         </div>
         <div className="kapcs-conten mb-5 mt-5 d-flex flex-wrap justify-content-evenly">
@@ -245,14 +243,11 @@ const Kapcsolat = () => {
             <p className='text-center'>Koleszár Ferenc</p>
           </div>
         </div>
+        <div className="d-none d-md-block">
         {isLoaded ? (
           <div className="d-flex justify-content-center">
             <GoogleMap
-              mapContainerStyle={
-                window.innerWidth <= 768
-                  ? mapContainerStyleMobile
-                  : mapContainerStyle
-              }
+              mapContainerStyle={mapContainerStyle}
               center={center}
               zoom={17}
               onLoad={onLoad}
@@ -262,8 +257,24 @@ const Kapcsolat = () => {
             </GoogleMap>
           </div>
         ) : null}
+        </div>
+        <div className=" d-md-none">
+        {isLoaded ? (
+          <div className="d-flex justify-content-center">
+            <GoogleMap
+              mapContainerStyle={mapContainerStyleMobile}
+              center={center}
+              zoom={17}
+              onLoad={onLoad}
+              onUnmount={onUnmount}
+            >
+              <></>
+            </GoogleMap>
+          </div>
+        ) : null}
+        </div>
         <div className="contactus-container col-lg-12 pt-5 pb-5 ">
-          <form onSubmit={handeSubmit}>
+          <form className='d-flex flex-column align-items-center' onSubmit={handeSubmit}>
             <Container>
               <p className="text-center fs-4 mb-4">
                 Amennyiben bármilyen kérdése van, vegye fel velünk a
@@ -352,7 +363,7 @@ const Kapcsolat = () => {
                 </div>
               </Row>
             </Container>
-            <Container className="d-flex justify-content-center">
+            
               <div className="col-lg-8">
                 {messageIsInvalid && (
                   <small style={{ color: 'red' }}>
@@ -360,6 +371,7 @@ const Kapcsolat = () => {
                   </small>
                 )}
                 <textarea
+                style={{minWidth:'255px'}}
                   type="text"
                   className="form-control border-bottom rounded-0 p-0 text-white pb-3 pt-3 mt-2 "
                   rows={10}
@@ -369,7 +381,7 @@ const Kapcsolat = () => {
                   onChange={(e) => setMessage(e.target.value)}
                 />
               </div>
-            </Container>
+            
             <Container className="d-flex justify-content-center mt-3">
               <button className="button-kapcs">Küldés</button>
             </Container>

@@ -19,7 +19,7 @@ const Ul = styled.ul`
     color: white;
     list-style: none !important;
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.2s ease-in-out;
     font-weight: bold;
   }
   a:hover {

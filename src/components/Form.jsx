@@ -1,7 +1,7 @@
 import { Container } from 'react-bootstrap';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import DownloadIcon from '@mui/icons-material/Download';
-
+import { Link } from 'react-router-dom';
 const Form = () => {
   const downLoad = '../../Kérelem.pdf';
   const downLoad2 = '../../EGÉSZSÉGI_ÁLLAPOTRA_VONATKOZÓ_IGAZOLÁS.pdf';
@@ -19,7 +19,7 @@ const Form = () => {
           backgroundSize: 'cover',
         }}
       >
-        <Container>
+       <Container className='pt-4'>
           <div className="d-flex justify-content-center">
             <h1 className="display-4 textshadow pt-5 text-white">
               Formanyomtatványok
@@ -27,15 +27,12 @@ const Form = () => {
           </div>
         </Container>
       </div>
-      <div className="form-content">
+      <div className="form-content" style={{maxHeight:'36px'}}>
         <Breadcrumb className="container">
           <div className="bread d-flex flex-wrap">
-            <div className="one">
-              <p className="fs-5 fw-bold m-0 d-none d-md-block  text-black">Formanyomtatványok</p>
-            </div>
             <div className="sec d-flex alig-items-center header-text">
               <Breadcrumb.Item className="d-flex align-items-center" href="/">
-                Főoldal
+              <Link to='/'> Főoldal</Link> 
               </Breadcrumb.Item>
               <Breadcrumb.Item className="d-flex align-items-center" active>
                 Formanyomtatványok

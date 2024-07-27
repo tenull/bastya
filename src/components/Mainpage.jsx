@@ -12,7 +12,7 @@ import { Navigation, Autoplay, Zoom } from 'swiper';
 import 'swiper/css';
 import Container from 'react-bootstrap/Container';
 import { foglalkozasData } from '../foglalkozasData';
-
+import { Link } from 'react-router-dom';
 console.log(foglalkozasData);
 const Mainpage = () => {
   return (

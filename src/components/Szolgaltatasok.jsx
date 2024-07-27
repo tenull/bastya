@@ -1,11 +1,12 @@
 import { Container } from "react-bootstrap";
 import { Breadcrumb } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const Szolgaltatasok = () => {
     return ( 
 
         <div className="szolg-main">
             <div className="szolg-header" style={{backgroundImage:'url(../virag.jpg)',width:'100%',height:'300px',backgroundPosition:'center',backgroundSize:'cover'}}>
-                <Container> 
+            <Container className='pt-4'> 
                 <div  className="d-flex justify-content-center">
                     <h1 className="display-4 textshadow pt-5 text-white">Szolgáltatások
                     </h1> 
@@ -14,21 +15,20 @@ const Szolgaltatasok = () => {
                  </Container>
               
             </div>
-            <div className="form-content">
+            <div className="form-content" style={{maxHeight:'36px'}}>
                 <Breadcrumb className="container">
                     <div className="bread d-flex flex-wrap">
-                    <div className="one">
-                        <p className="fs-5 fw-bold m-0 d-none d-md-block  text-black">Szolgáltatások</p>
-                    </div>
                     <div className="sec d-flex alig-items-center header-text">
-                        <Breadcrumb.Item className="" href="/">Főoldal</Breadcrumb.Item>
+                        <Breadcrumb.Item className="" href="/">
+                        <Link to='/'> Főoldal</Link> 
+                        </Breadcrumb.Item>
                         <Breadcrumb.Item className="" active>Szolgáltatások</Breadcrumb.Item>
                     </div>
                     </div>
                 </Breadcrumb>
 
             </div>
-            <div className="szolg-content container">
+            <div className="szolg-content container mt-3">
                 
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, velit. Tenetur, molestiae nisi voluptatibus ratione nobis impedit, illum reprehenderit alias expedita dolorum delectus porro fuga nam excepturi odit! Quo, distinctio!
                 Dolorum, tempore perferendis. Error natus reprehenderit corrupti ullam, sequi, earum dicta, pariatur minima totam veritatis nemo dignissimos. Tempora, sed obcaecati itaque repellat, veniam quasi repudiandae quidem, cumque pariatur ex aspernatur.

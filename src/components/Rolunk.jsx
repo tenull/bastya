@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { Breadcrumb } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 const Rolunk = () => {
   return (
     <div className="about-us">
@@ -14,22 +15,20 @@ const Rolunk = () => {
           backgroundSize: 'cover',
         }}
       >
-        <Container>
+        <Container className='pt-4'>
           <div className="d-flex justify-content-center">
             <h1 className="display-4 textshadow pt-5 text-white">Rólunk</h1>
           </div>
         </Container>
       </div>
       <div className="about-main ">
-        <div className="form-content">
-          <Breadcrumb className="container">
+        <div className="form-content" style={{maxHeight:'36px'}}>
+          <Breadcrumb className="container mb-0 pb-0">
             <div className="bread d-flex flex-wrap">
-              <div className="one">
-                <p className="fs-5 fw-bold m-0 d-none d-sm-block  text-black">Rólunk</p>
-              </div>
+              
               <div className="sec d-flex alig-items-center header-text">
                 <Breadcrumb.Item className="" href="/">
-                  Főoldal
+                <Link to='/'> Főoldal</Link> 
                 </Breadcrumb.Item>
                 <Breadcrumb.Item className="" active>
                   Rólunk
@@ -39,14 +38,14 @@ const Rolunk = () => {
           </Breadcrumb>
         </div>
         <div className="mainabout-container mt-3 container">
-          <div className="main-about d-flex flex-wrap">
+          <div className="main-about  ">
             <img
-              className="img-fluid col-lg-2 m-2 rounded"
-              style={{ maxWidth: '200px' }}
+              className="img-fluid  m-2 rounded"
+              style={{ maxWidth: '200px' , float:'left'}}
               src="../kep2.jpg"
               alt=""
             />
-            <p className="col-lg-10">
+            <p className="">
               {' '}
               A település neve a méretére utal. A XIII. század közepén a
               szabolcsi várispánság birtoka, de a tatárjáráskor elpusztul. Az
@@ -65,8 +64,8 @@ const Rolunk = () => {
               valmint harangláb. <br />
             </p>
           </div>
-          <div className="middle-about d-flex flex-wrap">
-            <p className="col-lg-10">
+          <div className="middle-about ">
+            <p className="">
               1788. június 3-án tette le a templomépítő főkurátor, Bónis László
               férfi és női atyafiainak jelenlétében az új templom alapkövét a
               délkeleti oldal alá. Tervét készítette Szabolcs vármegye hites
@@ -82,7 +81,16 @@ const Rolunk = () => {
               volt róla, 1779 óta van, korábban a templomkert utcai kapujánál,
               most pedig a templom délkeleti sarka előtt. A 132 kg-os harangját
               Szlezák László öntötte 1935-ben Budapesten, a 90 kg-osat pedig
-              Korrents Márk 1853-ban Egerben. A kelet – nyugati tengelyű templom
+              Korrents Márk 1853-ban Egerben.
+            </p>
+            <img
+              className="img-fluid  m-2 rounded"
+              style={{ maxWidth: '200px', float:'right' }}
+              src="../kep2.jpg"
+              alt=""
+            />
+          </div>
+          A kelet – nyugati tengelyű templom
               keleti homlokzata torony nélküli, háromszögű oromzattal záródik.
               Egyetlen bejárata ennek közepén nyílik, egyenes záródású,
               kőkeretes, záróköves kapu. Fölötte a tolcsvai Bónis család címerét
@@ -94,14 +102,6 @@ const Rolunk = () => {
               készült a templomépítés idején.A 275 ülőhelyes késő barokk stílusú
               templom műemlék jellegű. Orgonáját Demény Imre építette 1938-ban
               három változattal. <br />
-            </p>
-            <img
-              className="img-fluid col-lg-2 m-2 rounded"
-              style={{ maxWidth: '200px' }}
-              src="../kep2.jpg"
-              alt=""
-            />
-          </div>
           Fényes Elek szerint 583 református és 328 más, az 1911-13. évi
           névtárak szerint 614 református és 1145 más vallású lakója volt. A
           temetőben nyugszik Héczei Szabó Lajos, ki 20 évig volt lelkésze, és

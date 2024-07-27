@@ -9,8 +9,8 @@ const Footer = () => {
     height: '350px',
   };
   const mapContainerStyleMobile = {
-    width: '200px',
-    height: '200px',
+    width: '250px',
+    height: '250px',
   };
 
   const center = {
@@ -82,14 +82,26 @@ const Footer = () => {
             </a>
           </div>
           <div className="footer-right position-relative col-lg-4">
-            <div className="footer-map">
+            <div className="footer-map d-none d-md-block">
               {isLoaded ? (
                 <GoogleMap
-                  mapContainerStyle={
-                    window.innerWidth <= 768
-                      ? mapContainerStyleMobile
-                      : mapContainerStyle
-                  }
+                
+                  mapContainerStyle={mapContainerStyle}
+                  center={center}
+                  zoom={18}
+                  onLoad={onLoad}
+                  onUnmount={onUnmount}
+                >
+                  <></>
+                </GoogleMap>
+              ) : null}
+              <p>4450,Tiszalök, Hősök tere 7/a</p>
+            </div>
+            <div className="footer-map d-md-none">
+              {isLoaded ? (
+                <GoogleMap
+                
+                  mapContainerStyle={mapContainerStyleMobile}
                   center={center}
                   zoom={18}
                   onLoad={onLoad}
